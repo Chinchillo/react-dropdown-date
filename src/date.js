@@ -83,6 +83,7 @@ export class DropdownDate extends React.Component {
     generateYearOptions() {
         const { startYear, endYear } = this.state;
         const yearOptions = [];
+        /*
         yearOptions.push(
             <option key={-1} value="-1"
                 className={(this.props.classes && this.props.classes.yearOptions) ? this.props.classes.yearOptions : null}
@@ -90,6 +91,7 @@ export class DropdownDate extends React.Component {
                 {(this.props.defaultValues && this.props.defaultValues.year) ? this.props.defaultValues.year : ''}
             </option>
         );
+        */
         if (this.props.options && this.props.options.yearReverse) {
             for (let i = endYear; i >= startYear; i--) {
                 yearOptions.push(
@@ -155,12 +157,14 @@ export class DropdownDate extends React.Component {
         }
 
         const monthOptions = [];
+        /*
         monthOptions.push(
             <option key={-1} value="-1"
                 className={(this.props.classes && this.props.classes.monthOptions) ? this.props.classes.monthOptions : null}
             >{(this.props.defaultValues && this.props.defaultValues.month) ? this.props.defaultValues.month : ''}
             </option>
         );
+        */
         months.forEach((elem) => {
             monthOptions.push(
                 <option key={elem.value} value={elem.value}
@@ -175,6 +179,7 @@ export class DropdownDate extends React.Component {
     generateDayOptions() {
         const { startYear, startMonth, startDay, endYear, endMonth, endDay, selectedYear, selectedMonth } = this.state;
         const dayOptions = [];
+        /*
         dayOptions.push(
             <option key={-1} value="-1"
                 className={(this.props.classes && this.props.classes.dayOptions) ? this.props.classes.dayOptions : null}
@@ -182,6 +187,7 @@ export class DropdownDate extends React.Component {
                 {(this.props.defaultValues && this.props.defaultValues.day) ? this.props.defaultValues.day : ''}
             </option>
         );
+        */
 
         let monthDays;
         if (selectedYear === startYear) {
